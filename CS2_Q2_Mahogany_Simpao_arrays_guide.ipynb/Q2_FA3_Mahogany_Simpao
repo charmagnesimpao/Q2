@@ -116,31 +116,53 @@
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "uXllM6VvuImt"
+        "id": "uXllM6VvuImt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8177f2e7-b283-45c3-a4fd-52b663bc131c"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--- Direct Index Access ---\n",
+            "Element at index 0: Ibis\n",
+            "Element at index 1: CSP\n",
+            "Element at index 2: Procreate\n",
+            "Element at index 3: Medibang\n",
+            "Element at index 4: Krita\n",
+            "\n",
+            "--- Modifying an Element via Index ---\n",
+            "Original index 2 item: ['Ibis', 'CSP', 'Procreate', 'Medibang', 'Krita']\n",
+            "Updated index 2 item: Ibis\n",
+            "Updated  List: ['Ibis', 'CSP', 'Ibis', 'Medibang', 'Krita']\n"
+          ]
+        }
+      ],
       "source": [
         "# Activity 1: Direct Index Accessing\n",
         "\n",
-        "#Create your list here\n",
+        "art_programs = [\"Ibis\", \"CSP\", \"Procreate\", \"Medibang\", \"Krita\"]\n",
         "\n",
         "\n",
         "#access your list here\n",
         "print(\"--- Direct Index Access ---\")\n",
-        "print(\"Element at index 0:\",  ____________)\n",
-        "print(\"Element at index 1:\",  ____________)\n",
-        "print(\"Element at index 2:\",  ____________)\n",
-        "print(\"Element at index 3:\", ____________)\n",
-        "print(\"Element at index 4:\", ____________)\n",
+        "print(\"Element at index 0:\", art_programs[0])\n",
+        "print(\"Element at index 1:\", art_programs[1])\n",
+        "print(\"Element at index 2:\", art_programs[2])\n",
+        "print(\"Element at index 3:\", art_programs[3])\n",
+        "print(\"Element at index 4:\", art_programs[4])\n",
         "\n",
         "print(\"\\n--- Modifying an Element via Index ---\")\n",
-        "print(\"Original index 2 item:\", ______)\n",
+        "print(\"Original index 2 item:\", art_programs)\n",
         "\n",
         "# Replacing index 2 __________ with new Value\n",
-        "____________ = _______\n",
+        "art_programs[2] = \"Ibis\"\n",
         "\n",
-        "print(\"Updated index 2 item:\", ____________)\n",
-        "print(\"Updated  List:\", ____________)\n"
+        "print(\"Updated index 2 item:\", art_programs[2])\n",
+        "print(\"Updated  List:\", art_programs)\n"
       ]
     },
     {
@@ -223,14 +245,70 @@
       "cell_type": "code",
       "source": [
         "#Activity 2: Process Your Data (Input + Computation/Search with Arrays/Lists)\n",
+        "art_programs = [\"Ibis\", \"CSP\", \"Procreate\", \"Medibang\", \"Krita\"]\n",
         "\n",
-        "#do your Activity 2 here"
+        "\n",
+        "\n",
+        "print(\"--- Direct Index Access ---\")\n",
+        "print(\"Element at index 0:\", art_programs[0])\n",
+        "print(\"Element at index 1:\", art_programs[1])\n",
+        "print(\"Element at index 2:\", art_programs[2])\n",
+        "print(\"Element at index 3:\", art_programs[3])\n",
+        "print(\"Element at index 4:\", art_programs[4])\n",
+        "\n",
+        "print(\"Original Array/List:\", art_programs)\n",
+        "index = int(input(\"Index to Update:\"))\n",
+        "new_value = input(\"New Value:\")\n",
+        "\n",
+        "print(\"Index to update\", index)\n",
+        "print(\"Value to update\", new_value)\n",
+        "\n",
+        "start = int(input(\"Enter the starting index:\"))\n",
+        "end = int(input(\"Enter the ending index:\"))\n",
+        "\n",
+        "sliced = art_programs[start:end]\n",
+        "print(\"Sliced Array/List:\", sliced)\n",
+        "\n",
+        "search = input(\"Enter search item:\")\n",
+        "\n",
+        "if search in sliced:\n",
+        "  print(search, \"is found in the sliced list.\")\n",
+        "else:\n",
+        "  print(search, \"is not found in the sliced list.\")\n",
+        "\n",
+        "if index >= 0 and index <5:\n",
+        "  art_programs[index] = new_value\n",
+        "else:\n",
+        "  print(\"Ummm this is invalid :/\")\n",
+        "\n",
+        "print(\"Updated Array/List:\", )"
       ],
       "metadata": {
-        "id": "ZlbX1-MWvx-c"
+        "id": "ZlbX1-MWvx-c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5d729d6b-dfa4-4694-8c5c-caa25565617b"
       },
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "--- Direct Index Access ---\n",
+            "Element at index 0: Ibis\n",
+            "Element at index 1: CSP\n",
+            "Element at index 2: Procreate\n",
+            "Element at index 3: Medibang\n",
+            "Element at index 4: Krita\n",
+            "Original Array/List: ['Ibis', 'CSP', 'Procreate', 'Medibang', 'Krita']\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -495,13 +573,92 @@
       "source": [
         "#Activity 3 (Graded or Non-Graded Formative Assessment): Data Analysis Mini App\n",
         "\n",
-        "Do your Activity 3 here\n"
+        "# student score analyzer\n",
+        "\n",
+        "scores = [67, 69, 87, 86, 96]\n",
+        "\n",
+        "def display_scores():\n",
+        "  print(\"=== Student Scores ===\")\n",
+        "  for number in range(len(scores)):\n",
+        "    print(\"Student:\", number + 1,\".\", scores[number])\n",
+        "\n",
+        "def search_score():\n",
+        "  number = int(input(\"Enter score to search:\"))\n",
+        "  if scores:\n",
+        "    print(number, \"was found :>\")\n",
+        "  else:\n",
+        "      print(number,\"doesn't exist on here.\")\n",
+        "\n",
+        "def calculate_scores():\n",
+        "  total = 0\n",
+        "  for score in scores:\n",
+        "    total = total + score\n",
+        "\n",
+        "  average = total/len(scores)\n",
+        "\n",
+        "  print(\"==== Score Statistics====\")\n",
+        "  print(\"Students:\", len(scores))\n",
+        "  print(\"Average score:\", average)\n",
+        "  print(\"Highest Score:\", max(scores))\n",
+        "  print(\"Lowest score:\", min(scores))\n",
+        "\n",
+        "  def update_scores():\n",
+        "    index = int(input(\"Enter index to le update (0-4):\"))\n",
+        "    new_score = int(input(\"Enter yur new scoree:\"))\n",
+        "    if index >= 0 and index < len(scores):\n",
+        "      scores[index] = new_score\n",
+        "      print(\"Score was updated ~\")\n",
+        "    else:\n",
+        "      print(\"Ayo sus that's an invalid index ;/\")\n",
+        "\n",
+        "  print(\"===Student Score Analyzer===\")\n",
+        "\n",
+        "\n",
+        "while True:\n",
+        "  print(\"1. Display Scores\")\n",
+        "  print(\"2. Search Score\")\n",
+        "  print(\"3. Compute le statistics\")\n",
+        "  print(\"4. Update le score\")\n",
+        "  print(\"5. Exit\")\n",
+        "\n",
+        "  choice = input(\"Choose an option:\")\n",
+        "\n",
+        "  if choice == \"1\":\n",
+        "    display_scores()\n",
+        "  elif choice == \"2\":\n",
+        "    search_score\n",
+        "  elif choice == \"3\":\n",
+        "    calculate_scores()\n",
+        "  elif choice == \"4\":\n",
+        "    update_scores()\n",
+        "  elif choice == \"5\":\n",
+        "    print(\"Okay..Fine...Bye...Thanks for using the program, though.\")\n",
+        "    break\n",
+        "  else:\n",
+        "    print(\"Invalid choice. Try again.\")\n",
+        "\n"
       ],
       "metadata": {
-        "id": "1lwZk-pJwT2z"
+        "id": "1lwZk-pJwT2z",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "75ac299d-2fe3-415d-c9d9-9576310ac855"
       },
       "execution_count": null,
-      "outputs": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1. Display Scores\n",
+            "2. Search Score\n",
+            "3. Compute le statistics\n",
+            "4. Update le score\n",
+            "5. Exit\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -520,6 +677,18 @@
         "---\n",
         "*Developed for Grade 8 Computer Science | Grounded in PSHS Curriculum Study Guide*"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "How is an array/list similar to a planner or checklist that you use in daily life?\n",
+        "\n",
+        "An array/list is similar to a planner or a checklist because it displays everything in one specific sequence, it shows what is first, last, and in between. Like real life checklists, you can rearrange arrays, remove certain variables, add variables, and replace variables. It isn't exactly completely different nor the same to lists in real life, but the two share many exact similarities. Being something you hold a sequence in.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "L64i0kFPbAM_"
+      }
     }
   ],
   "metadata": {
